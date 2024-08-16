@@ -16,7 +16,7 @@ export default function Introduction() {
             Hire me
           </button>
         </div>
-        <div className="mt-8">
+        <div className="mt-8 mb-10">
           <img
             src={picture}
             alt="Profile Pic"

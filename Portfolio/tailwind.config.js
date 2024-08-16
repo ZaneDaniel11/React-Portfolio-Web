@@ -8,9 +8,19 @@ module.exports = {
         "body-yellow": "#F3B304",
         "custom-red": "#ED3B23",
       },
-
       fontFamily: {
         kreon: ["Kreon", "sans-serif"],
+      },
+
+      keyframes: {
+        scroll: {
+          to: {
+            transform: "translateX(calc(-100% - 20px))",
+          },
+        },
+      },
+      animation: {
+        scroll: "scroll 20s linear infinite",
       },
     },
   },

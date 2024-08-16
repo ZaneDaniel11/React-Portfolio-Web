@@ -1,4 +1,5 @@
 import Abouts from "./About";
+import Portfolio from "./Portfolio";
 import Technology from "./Technology";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <Abouts />
       <Technology />
+      <Portfolio/>
     </>
   );
 }

@@ -1,43 +1,34 @@
+import React from "react";
+import html from "./assets/Logo/htmlLogo.svg";
+import css from "./assets/Logo/CSS.svg";
+import javascript from "./assets/Logo/javascript.svg";
+
 export default function Technology() {
   return (
     <div className="bg-[#1D1D1D]">
       <div className="text-center pt-8 font-kreon items-center justify-center">
-        <h1 className="text-5xl mb-4  font-bold text-body-yellow">
-          Technology
-        </h1>
+        <h1 className="text-5xl mb-4 font-bold text-body-yellow">Technology</h1>
         <span className="text-white text-2xl">
-          This is and Technology I've Worked With All Applied in My Projects
+          This is the Technology I've Worked With, All Applied in My Projects
         </span>
       </div>
 
-      <div>
-        <div>
-          <img src="" alt="" />
-          <span>HTML</span>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 p-8 font-kreon font-bold text-2xl ">
+        <div className="flex items-center justify-center border-2 border-gray-600 h-24 bg-gray-800 rounded-lg">
+          <img src={html} alt="HTML Logo" className="h-20 w-20 mr-4" />
+          <span className="text-white ">HTML</span>
         </div>
-        <div>
-          <img src="" alt="" />
-          <span>HTML</span>
+        <div className="flex items-center justify-center border-2 border-gray-600 h-24 bg-gray-800 rounded-lg">
+          <img src={css} alt="CSS Logo" className="h-20 w-20 mr-4" />
+          <span className="text-white ">CSS</span>
         </div>
-        <div>
-          <img src="" alt="" />
-          <span>HTML</span>
-        </div>
-        <div>
-          <img src="" alt="" />
-          <span>HTML</span>
-        </div>
-        <div>
-          <img src="" alt="" />
-          <span>HTML</span>
-        </div>
-        <div>
-          <img src="" alt="" />
-          <span>HTML</span>
-        </div>
-        <div>
-          <img src="" alt="" />
-          <span>HTML</span>
+        <div className="flex items-center justify-center border-2 border-gray-600 h-24 bg-gray-800 rounded-lg">
+          <img
+            src={javascript}
+            alt="JavaScript Logo"
+            className="h-12 w-20 mr-4"
+          />
+          <span className="text-white ">JavaScript</span>
         </div>
       </div>
     </div>

@@ -1,2 +1,12 @@
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
+
+intalled 
+
+npm install react-intersection-observer
+
+react-spring
+npm install @react-spring/web
+
+
+

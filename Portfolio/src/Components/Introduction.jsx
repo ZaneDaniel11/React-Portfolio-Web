@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
-import picture from "../assets/profilepic.png";
+import profilePic from "../../assets/profilepic.png";
 import "../CSS/Introduction.css";
 
 export default function Introduction() {
@@ -122,7 +122,7 @@ export default function Introduction() {
           className="mt-8 mb-10 md:mt-0 lg:mr-20"
         >
           <img
-            src={picture}
+            src={profilePic}
             alt="Profile Pic"
             style={{ borderRadius: "185.5px" }}
             className="lg:w-[512px]"

@@ -1,4 +1,5 @@
 import React from "react";
+import { useSpring, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 
 export default function Portfolio() {
@@ -20,14 +21,48 @@ export default function Portfolio() {
     },
   ];
 
+  // Animation for h1
+  const [refH1, inViewH1] = useInView({
+    triggerOnce: true,
+    threshold: 1, // 100% in view
+  });
+
+  const h1Spring = useSpring({
+    opacity: inViewH1 ? 1 : 0,
+    transform: inViewH1 ? "scale(1)" : "scale(0.5)", // Increased pop-up effect
+    config: { tension: 250, friction: 20 },
+  });
+
+  // Animation for span
+  const [refSpan, inViewSpan] = useInView({
+    triggerOnce: true,
+    threshold: 1, // 100% in view
+  });
+
+  const spanSpring = useSpring({
+    opacity: inViewSpan ? 1 : 0,
+    transform: inViewSpan ? "scale(1)" : "scale(0.5)", // Increased pop-up effect
+    config: { tension: 250, friction: 20 },
+  });
+
   return (
-    <div className="bg-[#F3B304] font-kreon h-auto py-8  ">
+    <div className="bg-[#F3B304] font-kreon h-auto py-8">
       <div className="text-center mb-8 mx-1.5">
-        <h1 className="text-5xl text-black font-bold">PORTFOLIO</h1>
-        <div className="  mt-3">
-          <span className="text-2xl text-black font-bold">
+        <animated.h1
+          ref={refH1}
+          style={h1Spring}
+          className="text-5xl text-black font-bold md:text-7xl md:pt-[100px]"
+        >
+          PORTFOLIO
+        </animated.h1>
+        <div className="mt-3 md:mt-6">
+          <animated.span
+            ref={refSpan}
+            style={spanSpring}
+            className="text-2xl text-black font-bold md:text-4xl"
+          >
             A Collection I've Been Working On
-          </span>
+          </animated.span>
         </div>
       </div>
 

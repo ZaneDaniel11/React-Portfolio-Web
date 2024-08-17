@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
-import picture from "../assets/profilepic.png";
+import picture from "../assets/Profilepic.png";
 import "../CSS/Introduction.css";
 
 export default function Introduction() {

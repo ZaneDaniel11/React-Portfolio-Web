@@ -28,13 +28,12 @@ export default function Introduction() {
     transform: "scale(0.9)",
   }));
 
-  // Typing animation states
   const [displayText, setDisplayText] = useState("Zane Daniel");
   const texts = ["Web Developer", "Zane Daniel"];
   const typingSpeed = 150;
   const eraseSpeed = 100;
   const delayBeforeErase = 1500;
-  const delayBeforeTypingStarts = 3000; // 2 seconds delay
+  const delayBeforeTypingStarts = 2000;
 
   useEffect(() => {
     let textIndex = 0;
@@ -102,7 +101,7 @@ export default function Introduction() {
             className="text-4xl mb-2 font-bold md:text-5xl lg:text-8xl lg:mt-6 relative whitespace-nowrap"
           >
             {displayText}
-            <span className="cursor"></span> {/* Cursor element */}
+            <span className="cursor"></span>
           </animated.p>
           <animated.p
             style={descSpring}
@@ -112,7 +111,7 @@ export default function Introduction() {
           </animated.p>
           <animated.button
             style={buttonSpring}
-            className="bg-custom-red text-white px-9 py-2 rounded border-2 border-black md:px-16 md:border-[3px] md:text-2xl lg:w-[210px] lg:h-[50px] lg:mt-7 "
+            className="bg-custom-red text-white px-9 py-2 rounded font-bold border-2 border-black md:px-16 md:border-[3px] md:text-2xl lg:w-[220px] lg:h-[50px] lg:mt-7 "
           >
             Hire me
           </animated.button>

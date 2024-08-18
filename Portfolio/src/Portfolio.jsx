@@ -11,14 +11,13 @@ export default function Portfolio() {
       id: 1,
       title: "Instagram Clone",
       imgSrc: insta,
-      description: "HTML/CSS/JAVASCIPT/AJAX/JQUEARY/PHP",
+      description: "HTML/CSS/JAVASCRIPT/AJAX/JQUERY/PHP",
     },
     {
       id: 2,
       title: "Bogo Central Bus Management System",
-
       imgSrc: obms,
-      description: "HTML/CSS/JQUERY/JAVASCRIP/PHP",
+      description: "HTML/CSS/JQUERY/JAVASCRIPT/PHP",
     },
     {
       id: 3,
@@ -27,19 +26,19 @@ export default function Portfolio() {
       description: "REACT JS/TAILWIND CSS/.NET Dapper",
     },
     {
-      id: 3,
+      id: 4,
       title: "Point of Sale System",
       imgSrc: pos,
       description: "REACT JS/TAILWIND CSS/.NET Dapper",
     },
     {
-      id: 3,
+      id: 5,
       title: "Point of Sale System",
       imgSrc: pos,
       description: "REACT JS/TAILWIND CSS/.NET Dapper",
     },
     {
-      id: 3,
+      id: 6,
       title: "Point of Sale System",
       imgSrc: pos,
       description: "REACT JS/TAILWIND CSS/.NET Dapper",
@@ -54,7 +53,7 @@ export default function Portfolio() {
 
   const h1Spring = useSpring({
     opacity: inViewH1 ? 1 : 0,
-    transform: inViewH1 ? "scale(1)" : "scale(0.5)", // Increased pop-up effect
+    transform: inViewH1 ? "scale(1)" : "scale(0.5)",
     config: { tension: 250, friction: 20 },
   });
 
@@ -66,7 +65,7 @@ export default function Portfolio() {
 
   const spanSpring = useSpring({
     opacity: inViewSpan ? 1 : 0,
-    transform: inViewSpan ? "scale(1)" : "scale(0.5)", // Increased pop-up effect
+    transform: inViewSpan ? "scale(1)" : "scale(0.5)",
     config: { tension: 250, friction: 20 },
   });
 
@@ -92,12 +91,13 @@ export default function Portfolio() {
       </div>
 
       <div className="grid grid-cols-1 mx-1.5 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 pt-5">
-        {portfolioItems.map((item) => (
+        {portfolioItems.map((item, index) => (
           <PortfolioItem
             key={item.id}
             title={item.title}
             imgSrc={item.imgSrc}
             description={item.description}
+            index={index}
           />
         ))}
       </div>
@@ -105,18 +105,24 @@ export default function Portfolio() {
   );
 }
 
-function PortfolioItem({ title, imgSrc, description }) {
+function PortfolioItem({ title, imgSrc, description, index }) {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.5,
+  });
+
+  const animation = useSpring({
+    opacity: inView ? 1 : 0,
+    transform: inView ? "scale(1)" : "scale(0.7)",
+    config: { tension: 200, friction: 15 },
+    delay: index * 250, // Reduced delay for smoother appearance
   });
 
   return (
-    <div
+    <animated.div
       ref={ref}
-      className={`border-[3px] border-black rounded-lg overflow-hidden transform transition-all duration-700 h-96 ${
-        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
+      style={animation}
+      className="border-[4px] border-black rounded-md overflow-hidden h-96 lg:border-[4px]"
     >
       <div className="h-[60%]">
         <img src={imgSrc} alt={title} className="w-full h-full object-cover" />
@@ -127,6 +133,6 @@ function PortfolioItem({ title, imgSrc, description }) {
         </h1>
         <span className="text-sm md:text-lg lg:text-xl">{description}</span>
       </div>
-    </div>
+    </animated.div>
   );
 }

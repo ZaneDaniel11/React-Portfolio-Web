@@ -8,3 +8,6 @@
 .animation-delay-400 {
   animation-delay: 0.4s;
 }
+html {
+  scroll-behavior: smooth;
+}

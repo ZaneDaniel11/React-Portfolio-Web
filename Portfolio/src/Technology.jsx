@@ -9,6 +9,7 @@ import tailwind from "./assets/Logo/tailwind.svg";
 import jquery from "./assets/Logo/jquery.svg";
 import php from "./assets/Logo/php.svg";
 import dapper from "./assets/Logo/daper.jpg";
+import bootrtrp from "./assets/Logo/bootstrp.png";
 
 export default function Technology() {
   const techList = [
@@ -20,6 +21,7 @@ export default function Technology() {
     { src: jquery, label: "Jquery" },
     { src: php, label: "PHP" },
     { src: dapper, label: "Dapper" },
+    { src: bootrtrp, label: "Bootstrap" },
   ];
 
   // Animation for h1

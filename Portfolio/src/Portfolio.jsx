@@ -1,13 +1,14 @@
 import React from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
+import insta from "./assets/Portfolio/insta.bmp";
 
 export default function Portfolio() {
   const portfolioItems = [
     {
       id: 1,
-      title: "HTML/CSS/PHP/JAVASCRIPT",
-      imgSrc: "https://via.placeholder.com/300x200",
+      title: "Intagram Clone",
+      imgSrc: insta,
     },
     {
       id: 2,
@@ -47,19 +48,19 @@ export default function Portfolio() {
 
   return (
     <div className="bg-[#F3B304] font-kreon h-auto py-8">
-      <div className="text-center mb-8 mx-1.5">
+      <div className="text-center mb-8 mx-1.5 lg:pb-[80px]">
         <animated.h1
           ref={refH1}
           style={h1Spring}
-          className="text-5xl text-black font-bold md:text-7xl md:pt-[100px]"
+          className="text-5xl text-black font-bold md:text-7xl md:pt-[100px] lg:text-9xl"
         >
           PORTFOLIO
         </animated.h1>
-        <div className="mt-3 md:mt-6">
+        <div className="mt-3 md:mt-6 lg:mt-10">
           <animated.span
             ref={refSpan}
             style={spanSpring}
-            className="text-2xl text-black font-bold md:text-4xl"
+            className="text-2xl text-black font-bold md:text-4xl lg:text-6xl mt-7"
           >
             A Collection I've Been Working On
           </animated.span>

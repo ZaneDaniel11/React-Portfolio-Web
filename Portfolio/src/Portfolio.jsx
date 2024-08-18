@@ -2,23 +2,47 @@ import React from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 import insta from "./assets/Portfolio/insta.bmp";
+import obms from "./assets/Portfolio/OBMS.bmp";
+import pos from "./assets/Portfolio/POS.jpg";
 
 export default function Portfolio() {
   const portfolioItems = [
     {
       id: 1,
-      title: "Intagram Clone",
+      title: "Instagram Clone",
       imgSrc: insta,
+      description: "HTML/CSS/JAVASCIPT/AJAX/JQUEARY/PHP",
     },
     {
       id: 2,
-      title: "Testing",
-      imgSrc: "https://via.placeholder.com/300x200",
+      title: "Bogo Central Bus Management System",
+
+      imgSrc: obms,
+      description: "HTML/CSS/JQUERY/JAVASCRIP/PHP",
     },
     {
       id: 3,
-      title: "Testing",
-      imgSrc: "https://via.placeholder.com/300x200",
+      title: "Point of Sale System",
+      imgSrc: pos,
+      description: "REACT JS/TAILWIND CSS/.NET Dapper",
+    },
+    {
+      id: 3,
+      title: "Point of Sale System",
+      imgSrc: pos,
+      description: "REACT JS/TAILWIND CSS/.NET Dapper",
+    },
+    {
+      id: 3,
+      title: "Point of Sale System",
+      imgSrc: pos,
+      description: "REACT JS/TAILWIND CSS/.NET Dapper",
+    },
+    {
+      id: 3,
+      title: "Point of Sale System",
+      imgSrc: pos,
+      description: "REACT JS/TAILWIND CSS/.NET Dapper",
     },
   ];
 
@@ -73,6 +97,7 @@ export default function Portfolio() {
             key={item.id}
             title={item.title}
             imgSrc={item.imgSrc}
+            description={item.description}
           />
         ))}
       </div>
@@ -80,7 +105,7 @@ export default function Portfolio() {
   );
 }
 
-function PortfolioItem({ title, imgSrc }) {
+function PortfolioItem({ title, imgSrc, description }) {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -89,15 +114,18 @@ function PortfolioItem({ title, imgSrc }) {
   return (
     <div
       ref={ref}
-      className={`border-[3px] border-[#1D1D1D] rounded-lg overflow-hidden transform transition-all duration-700 ${
+      className={`border-[3px] border-black rounded-lg overflow-hidden transform transition-all duration-700 h-96 ${
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
       <div className="h-[60%]">
         <img src={imgSrc} alt={title} className="w-full h-full object-cover" />
       </div>
-      <div className="h-[40%] flex items-center justify-center bg-[#1D1D1D] text-white p-4">
-        <h1>{title}</h1>
+      <div className="h-[40%] flex flex-col items-center justify-center bg-[#1D1D1D] text-white p-4">
+        <h1 className="text-lg md:text-2xl lg:text-3xl font-bold mb-2">
+          {title}
+        </h1>
+        <span className="text-sm md:text-lg lg:text-xl">{description}</span>
       </div>
     </div>
   );

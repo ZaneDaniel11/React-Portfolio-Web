@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Decoder</title>
+</head>
+<body>
+    <h1>Base64 Decoder</h1>
+    <textarea id="input" placeholder="Enter Base64 encoded string here" rows="4" cols="50"></textarea>
+    <br><br>
+    <button onclick="decodeBase64()">Decode</button>
+    <br><br>
+    <h2>Decoded Output:</h2>
+    <textarea id="output" rows="4" cols="50" readonly></textarea>
+
+    <script>
+        function decodeBase64() {
+            const input = document.getElementById('input').value.trim();
+            try {
+                const decoded = atob(input);
+                document.getElementById('output').value = decoded;
+            } catch (error) {
+                document.getElementById('output').value = 'Invalid Base64 string!';
+            }
+        }
+    </script>
+</body>
+</html>

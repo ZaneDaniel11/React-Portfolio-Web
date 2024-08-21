@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 import insta from "./assets/Portfolio/insta.bmp";
 import obms from "./assets/Portfolio/OBMS.bmp";
 import pos from "./assets/Portfolio/POS.jpg";
+import what from "./assets/what.gif";
 
 export default function Portfolio() {
   const portfolioItems = [
@@ -25,24 +26,7 @@ export default function Portfolio() {
       imgSrc: pos,
       description: "REACT JS/TAILWIND CSS/.NET Dapper",
     },
-    {
-      id: 4,
-      title: "Point of Sale System",
-      imgSrc: pos,
-      description: "REACT JS/TAILWIND CSS/.NET Dapper",
-    },
-    {
-      id: 5,
-      title: "Point of Sale System",
-      imgSrc: pos,
-      description: "REACT JS/TAILWIND CSS/.NET Dapper",
-    },
-    {
-      id: 6,
-      title: "Point of Sale System",
-      imgSrc: pos,
-      description: "REACT JS/TAILWIND CSS/.NET Dapper",
-    },
+    // Add more items as needed
   ];
 
   // Animation for h1
@@ -69,9 +53,27 @@ export default function Portfolio() {
     config: { tension: 250, friction: 20 },
   });
 
+  // // State and effect to toggle GIF visibility
+  // const [isVisible, setIsVisible] = useState(true);
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setIsVisible((prev) => !prev);
+  //   }, 3000); // Toggle every 5 seconds
+
+  //   return () => clearInterval(interval);
+  // }, []);
+
   return (
-    <div className="bg-[#F3B304] font-kreon h-auto py-8">
+    <div className="relative bg-[#F3B304] font-kreon h-auto py-8">
       <div className="text-center mb-8 mx-1.5 lg:pb-[80px]">
+        {/* {isVisible && (
+          <img
+            src={what}
+            alt="Bottom-Left GIF"
+            className="absolute left-0 w-15 h-15 md:w-32 md:h-32 lg:w-30 lg:h-30 lg:mt-56"
+          />
+        )} */}
         <animated.h1
           ref={refH1}
           style={h1Spring}

@@ -90,7 +90,7 @@ export default function Introduction() {
   return (
     <div className="block">
       <div className="flex flex-col md:flex-row h-auto bg-body-yellow font-kreon items-center md:items-start justify-center md:justify-between space-y-8 md:space-y-0 md:space-x-8 px-4 py-6 md:py-8 lg:px-10 md:pt-[120px] md:pb-[120px] lg:pt-[130px] lg:pb-[170px]">
-        <div className="text-center md:text-left lg:ml-20">
+        <div className="text-center md:text-left lg:ml-15">
           <animated.h1
             style={helloSpring}
             className="text-5xl m-0 mb-4 font-bold text-custom-red md:text-7xl lg:text-9xl"
@@ -108,7 +108,7 @@ export default function Introduction() {
             style={descSpring}
             className="text-2xl mb-6 md:text-3xl lg:text-5xl lg:mt-4"
           >
-            I am a web developer from the Philippines
+            A web developer from the Philippines
           </animated.p>
           <animated.button
             style={buttonSpring}

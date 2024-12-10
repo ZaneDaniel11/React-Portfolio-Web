@@ -4,7 +4,6 @@ import { useInView } from "react-intersection-observer";
 import insta from "./assets/Portfolio/insta.bmp";
 import obms from "./assets/Portfolio/OBMS.bmp";
 import pos from "./assets/Portfolio/POS.jpg";
-import what from "./assets/what.gif";
 
 export default function Portfolio() {
   const portfolioItems = [

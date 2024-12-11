@@ -1,10 +1,10 @@
-"use client"
+
 
 import { useState, useEffect } from "react"
 import GitHubCalendar from "react-github-calendar"
-import { Button } from "@/components/ui/button"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Badge } from "@/components/ui/badge"
+import { Button } from "../components/ui/button"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "../components/ui/dialog"
+import { Badge } from "../components/ui/badge"
 import { Users, ExternalLink } from "lucide-react"
 
 export default function Github() {

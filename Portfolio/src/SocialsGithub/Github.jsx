@@ -103,25 +103,25 @@ export default function Github() {
     {
       name: "Facebook",
       icon: Facebook,
-      url: "https://facebook.com/yourusername", // Replace with your Facebook
+      url: "https://facebook.com/Zanedaniel122003", // Replace with your Facebook
       color: "hover:text-blue-600",
     },
     {
       name: "Email",
       icon: Mail,
-      url: "mailto:your.email@gmail.com", // Replace with your email
+      url: "mailto:markdanielpardillo@gmail.com", // Replace with your email
       color: "hover:text-red-400",
     },
     {
       name: "WhatsApp",
       icon: MessageCircle,
-      url: "https://wa.me/1234567890", // Replace with your WhatsApp number
+      url: "https://wa.me/09493322358", // Replace with your WhatsApp number
       color: "hover:text-green-400",
     },
     {
       name: "Telegram",
       icon: Send,
-      url: "https://t.me/yourusername", // Replace with your Telegram
+      url: "https://t.me/ZaneDaniel", // Replace with your Telegram
       color: "hover:text-blue-500",
     },
   ]

@@ -157,7 +157,7 @@ export default function Github() {
         ) : (
           <div className="space-y-8 lg:space-y-12">
             {/* Stats Section */}
-            <div className="flex flex-row gap-4 justify-center items-center font-kreon">
+                 <div className="flex flex-row gap-4 justify-center items-center font-kreon">
               <div className="border-2 border-gray-600 bg-gray-800 text-white px-4 py-2 rounded-lg flex items-center">
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -167,6 +167,17 @@ export default function Github() {
               <div className="border-2 border-gray-600 bg-gray-800 text-white px-4 py-2 rounded-lg">
                 {repos.length} Repositories
               </div>
+              <a
+                href={`https://github.com/${username}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-gray-600 bg-gray-800 text-white px-4 py-2 rounded-lg flex items-center"
+              >
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z" />
+                </svg>
+                Follow
+              </a>
             </div>
 
             {/* Recent Repositories Section */}
@@ -241,7 +252,7 @@ export default function Github() {
               <div className="w-full">
   
                   <div className="w-full flex justify-center py-4">
-                    <div className="w-full max-w-[1200px]">
+                    <div className="">
                       <GitHubCalendar
                         username={username}
                         colorScheme="dark"

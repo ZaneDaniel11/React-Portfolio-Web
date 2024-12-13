@@ -3,7 +3,7 @@ import zanelogo from "../assets/Zanelog.gif"
 export default function Headers() {
   return (
     <div className="bg-header-yellow font-kreon block">
-      <div className="flex justify-between items-center h-24 mx-5 md:mx-20 lg:mx-[15px]">
+      <div className="flex justify-between items-center h-24 mx-5 md:mx-20 lg:mx-[30px]">
         <div className="flex space-x-4 items-center">
           {/* Flex container with alignment and spacing */}
           <h1 className="text-3xl md:text-5xl lg:text-7xl flex items-center">

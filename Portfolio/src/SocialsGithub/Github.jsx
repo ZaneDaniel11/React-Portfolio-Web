@@ -53,8 +53,8 @@ export default function Github() {
   return (
     <div className="font-kreon bg-[#1D1D1D] overflow-x-hidden w-full text-white p-4 lg:p-8">
       {/* Centered container for large screens */}
-      <div className="max-w-6xl mx-auto lg:text-center">
-        <h2 className="text-4xl lg:text-5xl mb-6 lg:mb-8 font-bold font-kreon text-body-yellow">GitHub Stats</h2>
+      <div className="text-center">
+        <h2 className="text-5xl mb-4 font-bold text-body-yellow md:text-7xl md:pt-[50px] pb-[20px] lg:text-9xl lg:pb-[40px]">GitHub Stats</h2>
 
         {loading ? (
           <div className="flex justify-center items-center py-8">
@@ -64,7 +64,7 @@ export default function Github() {
         ) : (
           <div className="space-y-8 lg:space-y-12">
             {/* Stats Section */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center font-kreon">
+            <div className="flex flex-row gap-4 justify-center items-center font-kreon">
               <div className=" border-2 border-gray-600 bg-gray-800 text-white px-4 py-2 rounded-lg flex items-center">
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -76,7 +76,7 @@ export default function Github() {
 
             {/* Recent Repositories Section */}
             <div className="lg:text-left">
-              <h3 className="text-2xl lg:text-3xl mb-4 lg:text-center text-body-yellow">Recent Projects</h3>
+              <h3 className="text-2xl text-black pb-[20px] font-bold md:text-4xl  md:pb-[20px] lg:text-6xl mt-7 lg:text-center text-body-yellow">Recent Projects</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                 {displayedRepos.map((repo) => (
                   <div

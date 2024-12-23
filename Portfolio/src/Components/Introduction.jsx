@@ -108,13 +108,13 @@ export default function Introduction() {
             style={descSpring}
             className="text-2xl mb-6 md:text-3xl lg:text-5xl lg:mt-4"
           >
-            I am a web developer in the Philippines
+            I am a web developer from the Philippines
           </animated.p>
           <animated.button
             style={buttonSpring}
             className="bg-custom-red text-white px-9 py-2 rounded font-bold border-2 border-black md:px-16 md:border-[3px] md:text-2xl lg:w-[220px] lg:h-[50px] lg:mt-7"
           >
-            Hire me
+            Subscribe
           </animated.button>
         </div>
         <animated.div

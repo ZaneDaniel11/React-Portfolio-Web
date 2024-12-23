@@ -49,7 +49,7 @@ export default function Technology() {
   });
 
   return (
-    <div className="bg-[#1D1D1D] overflow-x-hidden">
+    <div className="bg-[#1D1D1D] overflow-x-hidden ">
       <div className="text-center pt-8 font-kreon items-center justify-center mx-1.5 md:pt-[120px] lg:pb-[100px]">
         <animated.h1
           ref={refH1}

@@ -51,10 +51,10 @@ export default function Github() {
   const displayedRepos = repos.slice(0, 5)
 
   return (
-    <div className="bg-[#1D1D1D] overflow-x-hidden w-full text-white p-4 lg:p-8">
+    <div className="font-kreon bg-[#1D1D1D] overflow-x-hidden w-full text-white p-4 lg:p-8">
       {/* Centered container for large screens */}
       <div className="max-w-6xl mx-auto lg:text-center">
-        <h2 className="text-4xl lg:text-5xl mb-6 lg:mb-8 font-bold">GitHub Stats</h2>
+        <h2 className="text-4xl lg:text-5xl mb-6 lg:mb-8 font-bold font-kreon text-body-yellow">GitHub Stats</h2>
 
         {loading ? (
           <div className="flex justify-center items-center py-8">
@@ -64,24 +64,24 @@ export default function Github() {
         ) : (
           <div className="space-y-8 lg:space-y-12">
             {/* Stats Section */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="bg-gray-800 text-white px-4 py-2 rounded-lg flex items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center font-kreon">
+              <div className=" border-2 border-gray-600 bg-gray-800 text-white px-4 py-2 rounded-lg flex items-center">
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 {followers.length} Followers
               </div>
-              <div className="bg-gray-800 text-white px-4 py-2 rounded-lg">{repos.length} Repositories</div>
+              <div className=" border-2 border-gray-600 bg-gray-800 text-white px-4 py-2 rounded-lg">{repos.length} Repositories</div>
             </div>
 
             {/* Recent Repositories Section */}
             <div className="lg:text-left">
-              <h3 className="text-2xl lg:text-3xl mb-4 lg:text-center">Recent Projects</h3>
+              <h3 className="text-2xl lg:text-3xl mb-4 lg:text-center text-body-yellow">Recent Projects</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                 {displayedRepos.map((repo) => (
                   <div
                     key={repo.id}
-                    className="bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors duration-300"
+                    className="border-2 border-gray-600 bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors duration-300"
                   >
                     <div className="flex items-start justify-between mb-2">
                       <h4 className="text-lg font-semibold text-blue-400 truncate">{repo.name}</h4>
@@ -129,9 +129,9 @@ export default function Github() {
 
             {/* Contribution Graph Section */}
             <div>
-              <h3 className="text-2xl lg:text-3xl mb-6 lg:text-center">Contribution Graph</h3>
-              <div className="flex justify-center">
-                <div className="overflow-x-auto w-full">
+              <h3 className="text-2xl lg:text-3xl mb-6 lg:text-center text-body-yellow">Contribution Graph</h3>
+              <div className="flex justify-center min-w-[320px]">
+                <div className="">
                   <GitHubCalendar
                     username={username}
                     colorScheme="dark"

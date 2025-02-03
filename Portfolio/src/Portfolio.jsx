@@ -41,9 +41,9 @@ export default function Portfolio() {
     },
     {
       id: 6,
-      title: "Point of Sale System",
+      title: "Portfolio Website",
       imgSrc: pos,
-      description: "REACT JS/TAILWIND CSS/.NET Dapper",
+      description: "REACT JS/TAILWIND CSS",
     },
   ]
 

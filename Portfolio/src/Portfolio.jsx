@@ -23,9 +23,9 @@ export default function Portfolio() {
     },
     {
       id: 3,
-      title: "Point of Sale System",
+      title: "Loan Management System",
       imgSrc: pos,
-      description: "REACT JS/TAILWIND CSS/.NET Dapper",
+      description: "HTML/CSS/Bootsrap/.NET MVC",
     },
     {
       id: 4,

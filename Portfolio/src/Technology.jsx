@@ -101,7 +101,7 @@ function TechItem({ src, label, index }) {
     >
       <div className="w-2/5 md:w-1/2 lg:w-1/2 flex justify-center">
         <img
-          src={src}
+          src={src || "/placeholder.svg"}
           alt={`${label} Logo`}
           className="h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20"
         />

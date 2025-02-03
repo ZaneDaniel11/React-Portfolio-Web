@@ -35,7 +35,7 @@ export default function Portfolio() {
     },
     {
       id: 5,
-      title: "Point of Sale System",
+      title: "LifeWood Application System",
       imgSrc: pos,
       description: "REACT JS/TAILWIND CSS/.NET Dapper",
     },

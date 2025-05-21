@@ -24,27 +24,26 @@ export default function Technology() {
     { src: bootrtrp, label: "Bootstrap" },
   ];
 
-  // Animation for h1
+ 
   const [refH1, inViewH1] = useInView({
     triggerOnce: true,
-    threshold: 1, // 100% in view
+    threshold: 1, 
   });
-
   const h1Spring = useSpring({
     opacity: inViewH1 ? 1 : 0,
-    transform: inViewH1 ? "scale(1)" : "scale(0.5)", // Increased pop-up effect
+    transform: inViewH1 ? "scale(1)" : "scale(0.5)", 
     config: { tension: 250, friction: 20 },
   });
 
-  // Animation for span
+ 
   const [refSpan, inViewSpan] = useInView({
     triggerOnce: true,
-    threshold: 1, // 100% in view
+    threshold: 1,
   });
 
   const spanSpring = useSpring({
     opacity: inViewSpan ? 1 : 0,
-    transform: inViewSpan ? "scale(1)" : "scale(0.5)", // Increased pop-up effect
+    transform: inViewSpan ? "scale(1)" : "scale(0.5)", 
     config: { tension: 250, friction: 20 },
   });
 
@@ -91,7 +90,7 @@ function TechItem({ src, label, index }) {
     opacity: inView ? 1 : 0,
     transform: inView ? "scale(1)" : "scale(0.7)",
     config: { tension: 200, friction: 15 },
-    delay: index * 150, // Reduced delay for smoother appearance
+    delay: index * 150,
   });
 
   return (

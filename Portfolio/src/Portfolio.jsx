@@ -44,13 +44,13 @@ export default function Portfolio() {
       imgSrc: pos,
       description: "REACT JS/TAILWIND CSS/.NET Dapper",
     },
-    // Add more items as needed
+    
   ];
 
-  // Animation for h1
+
   const [refH1, inViewH1] = useInView({
     triggerOnce: true,
-    threshold: 1, // 100% in view
+    threshold: 1, 
   });
 
   const h1Spring = useSpring({
@@ -59,10 +59,10 @@ export default function Portfolio() {
     config: { tension: 250, friction: 20 },
   });
 
-  // Animation for span
+
   const [refSpan, inViewSpan] = useInView({
     triggerOnce: true,
-    threshold: 1, // 100% in view
+    threshold: 1, 
   });
 
   const spanSpring = useSpring({
@@ -135,7 +135,7 @@ function PortfolioItem({ title, imgSrc, description, index }) {
     opacity: inView ? 1 : 0,
     transform: inView ? "scale(1)" : "scale(0.7)",
     config: { tension: 200, friction: 15 },
-    delay: index * 250, // Reduced delay for smoother appearance
+    delay: index * 250, 
   });
 
   return (

@@ -10,18 +10,27 @@ import jquery from "./assets/Logo/jquery.svg";
 import php from "./assets/Logo/php.svg";
 import dapper from "./assets/Logo/daper.jpg";
 import bootrtrp from "./assets/Logo/bootstrp.png";
+import shadcn from "./assets/Logo/shadcn.png";
+import dotnet from "./assets/Logo/NET_Core_Logo.svg";
+import figma from "./assets/Logo/Figma-logo.svg";
+import Vite from "./assets/Logo/logo.svg";
 
 export default function Technology() {
   const techList = [
     { src: html, label: "HTML" },
     { src: css, label: "CSS" },
     { src: javascript, label: "JavaScript" },
+    { src: php, label: "PHP" },
+    { src: php, label: "C#" },
     { src: react, label: "React Js" },
     { src: tailwind, label: "Tailwind CSS" },
     { src: jquery, label: "Jquery" },
-    { src: php, label: "PHP" },
     { src: dapper, label: "Dapper" },
     { src: bootrtrp, label: "Bootstrap" },
+    { src: Vite, label: "Vite" },
+    { src: shadcn, label: "Shadcn Ui" },
+    { src: dotnet, label: ".Net" },
+    { src: figma, label: "Figma" },
   ];
 
  

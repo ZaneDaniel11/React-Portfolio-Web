@@ -6,14 +6,19 @@ import { useInView } from "react-intersection-observer"
 import insta from "./assets/Portfolio/insta.bmp"
 import obms from "./assets/Portfolio/OBMS.bmp"
 import pos from "./assets/Portfolio/POS.jpg"
+import lifewood from "./assets/Portfolio/Lifewood.png"
+import PortfolioPic from "./assets/Portfolio/Portfolio.png"
+import Custodian from "./assets/Portfolio/Custodian.png"
+
 
 export default function Portfolio() {
   const portfolioItems = [
-    {
+   
+     {
       id: 1,
-      title: "Instagram Clone",
-      imgSrc: insta,
-      description: "PHP/CSS/JAVASCRIPT/AJAX/JQUERY/",
+      title: "Fix asset and Inventory Management System",
+      imgSrc: Custodian,
+      description: "React Js/Tailwind CSS/.Net Dapper/ShadcnUI",
     },
     {
       id: 2,
@@ -36,14 +41,20 @@ export default function Portfolio() {
     {
       id: 5,
       title: "LifeWood Application System",
-      imgSrc: pos,
-      description: "REACT JS/TAILWIND CSS/.NET Dapper",
+      imgSrc: lifewood,
+      description: "REACT JS/TAILWIND CSS/.NET Dapper/React Redux",
     },
     {
       id: 6,
       title: "Portfolio Website",
-      imgSrc: pos,
+      imgSrc: PortfolioPic,
       description: "REACT JS/TAILWIND CSS",
+    },
+     {
+      id: 1,
+      title: "Instagram Clone",
+      imgSrc: insta,
+      description: "PHP/CSS/JAVASCRIPT/AJAX/JQUERY/",
     },
   ]
 

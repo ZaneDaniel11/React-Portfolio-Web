@@ -14,6 +14,7 @@ import shadcn from "./assets/Logo/shadcn.png";
 import dotnet from "./assets/Logo/NET_Core_Logo.svg";
 import figma from "./assets/Logo/Figma-logo.svg";
 import Vite from "./assets/Logo/logo.svg";
+import Csharp from "./assets/Logo/Logo_C_sharp.svg.png";
 
 export default function Technology() {
   const techList = [
@@ -21,7 +22,7 @@ export default function Technology() {
     { src: css, label: "CSS" },
     { src: javascript, label: "JavaScript" },
     { src: php, label: "PHP" },
-    { src: php, label: "C#" },
+    { src: Csharp, label: "C#" },
     { src: react, label: "React Js" },
     { src: tailwind, label: "Tailwind CSS" },
     { src: jquery, label: "Jquery" },

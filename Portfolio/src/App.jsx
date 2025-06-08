@@ -6,7 +6,7 @@ import LoadingScreen from "./Loading"
 // Lazy load components for better loading experience
 const Abouts = React.lazy(() => import("./About"))
 const StockTicker = React.lazy(() => import("./Components/Infinitescroll"))
-const Portfolio = React.lazy(() => import("./portfolio"))
+const Portfolio = React.lazy(() => import("./Portfolio"))
 const Technology = React.lazy(() => import("./Technology"))
 const Github = React.lazy(() => import("./SocialsGithub/Github"))
 
@@ -25,7 +25,7 @@ function App() {
         const componentPromises = [
           import("./About"),
           import("./Components/Infinitescroll"),
-          import("./portfolio"),
+          import("./Portfolio"),
           import("./Technology"),
           import("./SocialsGithub/Github"),
         ]

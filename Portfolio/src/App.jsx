@@ -4,7 +4,7 @@ import React, { useState, useEffect, Suspense } from "react"
 import LoadingScreen from "./Loading"
 
 // Lazy load components for better loading experience
-const Abouts = React.lazy(() => import("./about"))
+const Abouts = React.lazy(() => import("./About"))
 const StockTicker = React.lazy(() => import("./Components/Infinitescroll"))
 const Portfolio = React.lazy(() => import("./portfolio"))
 const Technology = React.lazy(() => import("./Technology"))
@@ -23,7 +23,7 @@ function App() {
 
         // Preload all components
         const componentPromises = [
-          import("./about"),
+          import("./About"),
           import("./Components/Infinitescroll"),
           import("./portfolio"),
           import("./Technology"),
